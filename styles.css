@@ -89,13 +89,19 @@ main img {
 }
 main section p {
     margin: 0 auto; /* Adds margin on the top and bottom, auto on the sides for centering */
-    max-width: 80%; /* Adjust the maximum width as needed */
+    max-width: 60%; /* Adjust the maximum width as needed */
     text-align: justify; /* Justifies the text */
     line-height: 2.6; /* This is the line spacing */
+    text-indent: 15px;
+}
+main {
+    /* Other styles if any */
+    margin-bottom: 200px; /* Adds space below the main content */
 }
 
 #home h1 {
     text-align: center; /* Centers the text */
+    
 }
 
 #home {
@@ -103,6 +109,7 @@ main section p {
 }
 #newpage h1 {
     text-align: center; /* Centers the text */
+    
 }
 
 #newpage {
@@ -122,10 +129,11 @@ nav ul li.dropdown > a:after {
 
 #countdown {
     text-align: center;
-    margin: 30px 0; /* Adjust as needed */
+    margin: 20px 0; /* Adjust as needed */
     font-size: 40px; /* Adjust the size as needed */
     font-weight:bolder;
     color: rgb(169, 38, 45);
+    margin-bottom: 100px; 
 }
 #nav-logo {
     height: 40px; /* Adjust the size as needed */
@@ -155,4 +163,48 @@ th {
 td {
     text-align: left;
     vertical-align: top;
+}
+
+footer {
+    text-align: center; /* Centers the text inside the footer */
+    width: 100%; /* Ensures the footer spans the full width of the page */
+    padding: 20px 0;
+}
+
+.contact-info p {
+    text-align: left; /* Aligns text to the left */
+    margin-left: auto; /* Center aligns the contact info div */
+    margin-right: auto; /* Center aligns the contact info div */
+    max-width: 800px; /* Adjusts the width of the contact info area */
+}
+
+.contact-info {
+    display: block; /* Uses block to stack each piece of info */
+    margin-bottom: 10px; /* Adjusts space between lines */
+}
+
+.contact-info a {
+    color: #007bff; /* Adjusts the color of email link */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Adds underline on hover for links */
+}
+
+.contact-info strong {
+    font-weight: bold; /* Makes certain text bold */
+}
+
+.google-map {
+    text-align: center; /* Centers the iframe map */
+    padding: 20px 0; /* Adds padding above and below the map */
+}
+
+.google-map iframe {
+    width: 100%; /* Sets the width of the map to fill the container */
+    max-width: 800px; /* Optional: Sets a max-width for larger screens */
+    height: 550px; /* Sets the height of the map */
+    border: none; /* Removes the border around the iframe */
+    margin: auto; /* Centers the map horizontally */
 }
