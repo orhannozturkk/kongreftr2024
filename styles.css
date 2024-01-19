@@ -21,30 +21,44 @@ header {
 }
 
 nav {
-    /* Adjust padding to increase the height of the nav bar */
-    padding: 16px 0; /* Increase or decrease as needed */
+    display: flex; /* Use flexbox for the nav container */
+    align-items: center; /* Center-align the nav items vertically */
+    justify-content: center; /* Center-align the nav items horizontally */
+    padding: 1rem 0; /* Adjust padding as needed */
+}
+
+.navbar-logo {
+    display: flex; /* Use flexbox for logo alignment */
+    align-items: center; /* Center-align the logo vertically */
+    margin-right: 20px; /* Right margin for spacing between logo and nav items */
+}
+
+.navbar-logo img {
+    max-height: 50px; /* Maximum height for the logo */
+    width: auto; /* Width is auto to maintain aspect ratio */
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
+    display: flex; /* This will lay out the nav items in a row */
+    align-items: center; /* Center-align items vertically */
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 10px; /* Adjust spacing between nav items */
 }
 
 nav ul li a {
     color: rgb(35, 3, 3);
     text-decoration: none;
-    font-size: 16px; /* Adjust the font size as needed */
-    padding: 10px; /* Optional: Add padding to increase the clickable area */
+    font-size: 16px; /* Adjust font size as needed */
+    padding: 8px 10px; /* Padding for clickable area */
 }
 
 nav ul li a:hover {
     color: rgb(30, 29, 29);
-    
 }
 
 .dropdown {
@@ -208,3 +222,5 @@ footer {
     border: none; /* Removes the border around the iframe */
     margin: auto; /* Centers the map horizontally */
 }
+
+
