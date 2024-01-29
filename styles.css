@@ -9,15 +9,18 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    padding-top: 20px; /* adjust as necessary */
 }
 
 header {
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 1rem 0;
+    position: -webkit-sticky; /* Fallback for iOS Safari */
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 1rem 0;
+    
 }
 
 nav {
@@ -223,4 +226,21 @@ footer {
     margin: auto; /* Centers the map horizontally */
 }
 
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+@media screen and (max-width: 768px) {
+    /* Adjust styles for mobile devices */
+    .navbar-logo img {
+        max-height: 40px; /* smaller logo for mobile */
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul li {
+        width: 100%;
+    }
+    /* ... other styles ... */
+}
