@@ -6,20 +6,20 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f7fefe;
     color: #333;
     line-height: 1.6;
-    padding-top: 20px; /* adjust as necessary */
+    padding-top: 100px; /* adjust as necessary */
 }
 
 header {
-    position: -webkit-sticky; /* Fallback for iOS Safari */
-    position: sticky;
+    position: fixed; /* Changed from sticky to fixed */
     top: 0;
     z-index: 1000;
-    background-color: #f4f4f4;
+    background-color: #f7fefe;
     color: #333;
     padding: 1rem 0;
+    width: 100%; /* Ensure the header spans the full width */
     
 }
 
@@ -173,7 +173,7 @@ th, td {
 }
 
 th {
-    background-color: #f4f4f4;
+    background-color: #f7fefe;
     text-align: left;
 }
 
@@ -243,4 +243,8 @@ html, body {
         width: 100%;
     }
     /* ... other styles ... */
+}
+.indented p {
+    padding-left: 10 px; /* Adjust this value to match the alignment of "Kampüsümüze" */
+    text-indent: -8 px; /* This should be the negative value of padding-left */
 }
