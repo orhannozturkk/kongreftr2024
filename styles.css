@@ -78,6 +78,9 @@ nav ul li a:hover {
     z-index: 1;
     white-space: nowrap; /* Prevents text from wrapping */
     font-size: 12px; /* Adjust the font size as needed */
+
+    z-index: 1001; /* Higher than the header's z-index */
+    top: 100%; /* Adjust this value as needed to position the dropdown right below the nav bar */
 }
 
 .dropdown-content a {
@@ -90,6 +93,7 @@ nav ul li a:hover {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 
 .dropdown-content a:hover {
     background-color: #ddd;
