@@ -20,6 +20,7 @@ header {
     color: #333;
     padding: 1rem 0;
     width: 100%; /* Ensure the header spans the full width */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* This line adds a shadow */
     
 }
 
