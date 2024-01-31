@@ -250,6 +250,7 @@ html, body {
 
 
     .navbar-container {
+        position: relative; /* This is necessary for absolute positioning inside the container */
         overflow-x: auto; /* Makes the container scrollable horizontally */
         white-space: nowrap; /* Ensures nav items stay in one line */
     }
@@ -274,3 +275,23 @@ html, body {
     padding-left: 10 px; /* Adjust this value to match the alignment of "Kampüsümüze" */
     text-indent: -8 px; /* This should be the negative value of padding-left */
 }
+
+
+.language-switcher {
+    position: absolute;
+    right: 0; /* Aligns the switcher to the right edge */
+    top: 0; /* Aligns the switcher to the top of the navbar-container */
+    padding: 8px 10px; /* Adjust padding as needed */
+}
+
+
+.language-switcher a {
+    color: rgb(35, 3, 3); /* Same as your other nav links */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.language-switcher a:hover {
+    color: rgb(30, 29, 29); /* Hover effect */
+}
+
