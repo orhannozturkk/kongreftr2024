@@ -28,7 +28,7 @@ nav {
     display: flex; /* Use flexbox for the nav container */
     align-items: center; /* Center-align the nav items vertically */
     justify-content: center; /* Center-align the nav items horizontally */
-    padding: 1rem 0; /* Adjust padding as needed */
+    padding: 0.5rem 0; /* Adjust padding as needed */
 }
 
 .navbar-logo {
@@ -281,7 +281,7 @@ html, body {
 .language-switcher {
     position: absolute;
     right: 0; /* Aligns the switcher to the right edge */
-    top: 0; /* Aligns the switcher to the top of the navbar-container */
+    /*top: 0;  Aligns the switcher to the top of the navbar-container */
     padding: 8px 10px; /* Adjust padding as needed */
 }
 
