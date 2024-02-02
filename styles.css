@@ -103,7 +103,7 @@ nav ul li a:hover {
 }
 
 main img {
-    max-width: 100%; /* Maximum width but can be smaller */
+    max-width: 80%; /* Maximum width but can be smaller */
     height: auto; /* Maintain the natural aspect ratio */
     display: block; /* For block level, which allows margin: auto to work */
     margin: 0 auto; /* Center the image if not full width */
