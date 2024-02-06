@@ -51,20 +51,38 @@
     <main>
         <img src="images/F_EN_1.jpg" alt="aaaaaa">
         <section id="home">
-            <h1>Kongemize Kalan Süre</h1>
+            <h1>Time to Congress</h1>
             <p></p>
         </section>
         <div id="countdown">
-            <p id="timer"></p>
+            <div class="countdown-block">
+                <span id="days">54</span>
+                <small>DAYS</small>
+            </div>
+            <div class="countdown-block">
+                <span id="hours">14</span>
+                <small>HRS</small>
+            </div>
+            <div class="countdown-block">
+                <span id="minutes">35</span>
+                <small>MIN</small>
+            </div>
+            <div class="countdown-block">
+                <span id="seconds">59</span>
+                <small>SEC</small>
+            </div>
         </div>
         <section id="home">
-            <h1>Davet!</h1>
-            <p>  Değerli meslektaşlarımız,<Br> </p>
-            <p> <strong class="bold-and-large">9-11 Mayıs 2024</strong> tarihleri arasında <strong class="bold-and-large">İzmir Katip Çelebi Üniversitesinde</strong> düzenlenecek olan <strong class="bold-and-large">1. Fizyoterapi ve Rehabilitasyonda Eğitim, Araştırma ve İnovasyon Kongresi</strong> için düzenleme kurulumuz ile büyük bir heyecanla kongre çalışmalarına başladığımızı sizlere ilan etmekten mutluluk duymaktayız. <Br></p>
-            <p> Ana temasını <strong class="bold-and-large">Fizyoterapi ve Rehabilitasyonda İnovasyon</strong> olarak belirlediğimiz kongremizde <strong class="bold-and-large">Eğitim</strong> ve <strong class="bold-and-large">Araştırma</strong> başlıklarının yer almasını planlamaktayız.  Bilimsel program ve organizasyon için aralıksız olarak çalışmaktayız. Kongremiz ile ilgili detayları ilerleyen zamanda web sayfamızda sizlerle paylaşacağız.  <Br></p>
-            <p>  Ege’nin incisi İzmir’de baharın ve şehrin verdiği huzurlu günlerde siz değerli katılımcılarımızı kongremize katılmaya davet ediyor, sizleri aramızda görmek için sabırsızlanıyoruz. <Br><Br>
-            <p>   Kongre Düzenleme Kurulu adına,<Br></p>
-            <p>   Prof. Dr. Derya ÖZER KAYA<Br></p>
+            <h1>Invitation!</h1>
+            <p>  Dear colleagues,<Br> </p>
+            <p>  We are pleased to announce to you that we have started the congress work with great excitement with our organization committee for <strong class="bold-and-large">Congress on Education, Research and Innovation Congress in Physiotherapy and Rehabilitation</strong>, which will be held at <strong class="bold-and-large">Izmir Katip Çelebi University</strong> between <strong class="bold-and-large">9-11 May 2024</strong>. <Br></p>
+            <p> We plan to include the topics of <strong class="bold-and-large">Education</strong> and <strong class="bold-and-large">Research</strong> in our congress that the main theme is <strong class="bold-and-large">Innovation in Physiotherapy and Rehabilitation</strong>Innovation in Physiotherapy and Rehabilitation.  <Br></p>
+            <p>  We invite you, our valuable participants, to attend our congress in the peaceful days of spring and the city in Izmir which is the pearl of the Aegean, and we look forward to seeing you among us. <Br><Br>
+            <p>  On behalf of the Congress Organizing Committee,<Br></p>
+            <p>  Prof. Dr. Derya ÖZER KAYA<Br></p>
+            <p>  Assoc. Prof. Sevtap GÜNAY UÇURUM<Br></p>
+            <p>  Assoc. Prof. İlknur NAZ GÜRŞAN<Br></p>
+            
                 
                  
         </section>
@@ -75,7 +93,7 @@
     </main>
 
     <footer>
-        <p>© İzmir Katip Çelebi Üniversitesi Fizyoterapi ve Rehabilitasyon Uygulama Araştırma Merkezi Kongresidir<br>
+        <p>© Congress of Izmir Katip Çelebi University Physiotherapy and Rehabilitation Research and Application Center<br>
             Designed by Orhan ÖZTÜRK</p>
     </footer>
 
@@ -83,33 +101,29 @@
     <script src="script.js"></script>
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("May 9, 2024 00:00:00").getTime();
-    
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-    
-            // Get today's date and time
-            var now = new Date().getTime();
-            
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-            
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            // Display the result in the element with id="timer"
-            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
-            
-            // If the count down is finished, write some text 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("timer").innerHTML = "The event has started!";
-            }
-        }, 1000);
+var countDownDate = new Date("May 9, 2024 00:00:00").getTime();
+
+// Update the countdown every 1 second
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "The congress has started!";
+    }
+}, 1000);
+
     </script>
     
 </body>
