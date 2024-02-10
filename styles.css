@@ -76,7 +76,6 @@ nav ul li a:hover {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
     white-space: nowrap; /* Prevents text from wrapping */
     font-size: 12px; /* Adjust the font size as needed */
 
@@ -149,14 +148,7 @@ nav ul li.dropdown > a:after {
     font-weight:bolder;
 }
 
-#countdown {
-    text-align: center;
-    margin: 20px 0; /* Adjust as needed */
-    font-size: 40px; /* Adjust the size as needed */
-    font-weight:bolder;
-    color: rgb(169, 38, 45);
-    margin-bottom: 100px; 
-}
+
 #nav-logo {
     height: 40px; /* Adjust the size as needed */
     vertical-align: middle; /* Align with nav items if necessary */
@@ -235,43 +227,7 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
-@media screen and (max-width: 768px) {
-    /* Adjust styles for mobile devices */
-    /* .navbar-logo img {
-        max-height: 40px; /* smaller logo for mobile */
-    /* }
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    nav ul li {
-        width: 100%;
-    }
-    /* ... other styles ... */
 
-
-    .navbar-container {
-        position: relative; /* This is necessary for absolute positioning inside the container */
-        overflow-x: auto; /* Makes the container scrollable horizontally */
-        white-space: nowrap; /* Ensures nav items stay in one line */
-    }
-
-    nav ul {
-        flex-wrap: nowrap; /* Prevents wrapping of nav items */
-        justify-content: flex-start; /* Aligns nav items to the start */
-    }
-
-    nav ul li {
-        display: inline-block; /* Makes li elements line up in a row */
-        margin: 0 10px; /* Adjust spacing between nav items */
-    }
-
-    /* Style for the main image to be responsive */
-    main img {
-        width: 100%; /* Scales image to the width of its container */
-        height: auto; /* Keeps the aspect ratio */
-    }
-}
 .indented p {
     padding-left: 10 px; /* Adjust this value to match the alignment of "Kampüsümüze" */
     text-indent: -8 px; /* This should be the negative value of padding-left */
@@ -327,4 +283,94 @@ html, body {
     color: white; /* White color for the text */
     letter-spacing: 1px; /* Spacing between letters for the text */
     text-transform: uppercase; /* Uppercase text for DAYS, HRS, MIN, SEC */
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        position: fixed; /* Changed from sticky to fixed */
+        top: 0;
+        z-index: 10; /* Ensure the header is above other content */
+        
+    }
+    .navbar-container {
+        display: flex; /* Use flexbox for the navbar container */
+        justify-content: space-between; /* This will distribute space between and push the language switcher to the end */
+        align-items: center; /* This will vertically align the navbar items */
+        position: relative; /* Necessary for the absolute positioning of children if needed */
+        padding-right: 10px; /* Give some space on the right */
+        overflow-x: auto; /* Only horizontal scrolling */
+        overflow-y: hidden; /* Allows dropdowns to appear over the content */
+        white-space: nowrap; /* Ensures nav items stay in one line */
+        
+    }
+
+    .language-switcher {
+        order: 2; /* Ensures that language-switcher is placed at the end */
+        padding: 8px 10px; /* Adds padding to each nav item for tap targets */
+        position: relative; /* Necessary for the absolute positioning of children if needed */
+    }
+
+    nav ul {
+        order: 1;
+        display: flex; /* Continue using flexbox for the nav list */
+        flex-wrap: nowrap; /* Prevents wrapping of nav items */
+        padding-left: 0; /* Resets padding to align items properly */
+        margin-right: auto; /* Ensures the nav list takes up the necessary space */
+        overflow-x: auto; /* Enables horizontal scrolling for small screens */
+        
+        z-index: 1003; /* Ensure the header is above other content */
+    }
+    
+
+    nav ul li {
+        display: inline-block; /* Makes li elements line up in a row */
+        margin: 0 10px; /* Adjust spacing between nav items */
+    }
+
+    /* Style for the main image to be responsive */
+    main img {
+        width: 100%; /* Scales image to the width of its container */
+        height: auto; /* Keeps the aspect ratio */
+    }
+
+
+    .dropdown {
+        position: relative; /* Context for dropdown content */
+        z-index: 1002; /* High z-index to be on top */
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1002; /* High z-index to be on top */
+        left: 0;
+        right: 0;
+        top: 100%;
+        
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block; /* Show on hover */
+        
+    }
+    main {
+        position: relative; /* Ensure main is positioned for z-index */
+        z-index: 5; /* Lower z-index than header and dropdown */
+    }
+    main section p {
+        margin: 0 auto; /* Adds margin on the top and bottom, auto on the sides for centering */
+        max-width: 85%; /* Adjust the maximum width as needed */
+        text-align: justify; /* Justifies the text */
+        line-height: 2.6; /* This is the line spacing */
+        text-indent: 15px;
+    }
+
+    .contact-info p {
+        text-align: left; /* Aligns text to the left */
+        margin-left: auto; /* Center aligns the contact info div */
+        margin-right: auto; /* Center aligns the contact info div */
+        max-width: 85%; /* Adjusts the width of the contact info area */
+    }
 }
