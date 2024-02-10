@@ -130,7 +130,14 @@ main {
 }
 #newpage h1 {
     text-align: center; /* Centers the text */
-    
+}
+#newpage h3 {
+    text-align: center; /* Centers the text */
+}
+#newpage ul li {
+    text-align: center; /* Centers the text inside the footer */
+    width: 100%; /* Ensures the footer spans the full width of the page */
+    padding: 10px 0;
 }
 
 #newpage {
