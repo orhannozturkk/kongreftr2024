@@ -381,3 +381,69 @@ html, body {
         max-width: 85%; /* Adjusts the width of the contact info area */
     }
 }
+/* Style the tab links */
+.tab {
+    overflow: hidden;
+    text-align: center;
+    
+}
+  
+  /* Style the links inside the tab */
+.tab a {
+    background-color: inherit;
+    float:none;
+    border: 1px solid #ccc;;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 25px;
+    text-align: center;
+    
+}
+  
+  /* Change background color of links on hover */
+.tab a:hover {
+    background-color: #4c7bf310;
+}
+  
+  /* Create an active/current tablink class */
+.tab a.active {
+    background-color: #4c7bf322;
+    text-align: center;
+}
+
+  /* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 6px;
+    
+}
+
+.schedule-table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.schedule-table th {
+    background-color: #4C7BF3;
+    color: white;
+}
+
+.schedule-table td {
+    background-color: #FFFFFF;
+}
+
+.schedule-table .highlight {
+    background-color: #f9f692;
+}
+
+.schedule-table .time-slot {
+    background-color: #4C7BF3;
+    color: white;
+}
