@@ -106,7 +106,7 @@ main img {
     height: auto; /* Maintain the natural aspect ratio */
     display: block; /* For block level, which allows margin: auto to work */
     margin: 0 auto; /* Center the image if not full width */
-    margin-bottom: 50px; /* Adds space below the image */
+    margin-bottom: 15px; /* Adds space below the image */
 }
 main section p {
     margin: 0 auto; /* Adds margin on the top and bottom, auto on the sides for centering */
@@ -532,4 +532,22 @@ html, body {
 @keyframes zoom {
     from {transform: scale(0)}
     to {transform: scale(1)}
+}
+
+
+#sponsorLogos {
+    
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 0; /* No space between the main image and logos */
+    flex-wrap: nowrap; /* Ensures logos stay in one line */
+    
+}
+
+#sponsorLogos img {
+    height: 60px; /* Increased height */
+    width: auto; /* Auto width to maintain aspect ratio */
+    margin: 0;  /* Removes any default margin */
+    padding: 0; /* Removes any default padding */
 }
